@@ -59,7 +59,7 @@ public class UsersController {
 				
 			}
 		}
-		return "index";
+		return "index2";
 	}
 	
 	@RequestMapping("/makeappointment")
@@ -78,7 +78,7 @@ public class UsersController {
 	public String quit(HttpSession session) {
 		
 		session.invalidate();
-		return "index";
+		return "index2";
 	}
 	
 	@RequestMapping("/changeinfo")
@@ -118,8 +118,8 @@ public class UsersController {
 	AppointmentsService a;
 	@RequestMapping("/bac")
 	@ResponseBody
-	public void bac(Integer id) {	
-		usersService.updateUserBac(id);
+	public void bac(Integer uid,Integer id) {	
+		usersService.updateUserBac(uid);
 		a.changeStatusBa(id);
 	}
 }

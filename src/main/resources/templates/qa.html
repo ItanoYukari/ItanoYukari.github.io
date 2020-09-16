@@ -142,6 +142,9 @@ window.onload = function(){
 									else{
 										alert("已不超出一个工作日，无法取消")
 									}
+									var der=document.getElementsById('btn')								
+									while(der.length){    
+									der[0].parentNode.removeChild(der[0]);	}
 								})
 							element.appendChild(element2);
 						}
